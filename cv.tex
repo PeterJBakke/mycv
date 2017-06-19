@@ -1,0 +1,282 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+\usepackage{multirow}
+
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+\usepackage{array} \newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp} \newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}} \newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}} \newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+\usepackage{longtable}
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Shengyao \textsc{Zhu}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+
+%\section{Objective}
+
+%Seek a manager or assistant manager role in Advisory service of KPMG Denmark. 
+
+\section{Personal Info}
+
+\begin{tabular}{rl}
+    \textsc{Address:}   & Bagsværd Hovedgade 106, 2880 Bagsværd, Denmark \\
+    \textsc{Phone:}     & +0045 50 29 92 79\\
+    \textsc{email:}     & \href{mailto:shengyao.zhu@gmail.com}{shengyao.zhu@gmail.com} \\
+    \textsc{LinkedIn}  &  \url{dk.linkedin.com/in/shengyaozhu}
+\end{tabular}
+
+
+
+%\section{Summary}
+
+%I am currently in the third semester of Master program in Mathematical Modelling and Computation at Technical University of Denmark (DTU), my background is a combination of mathematical modelling, Finance and IT implementation. I have a Bachelor degree in Management Information System and more than five years working experience in market risk modelling area in international financial institution and consulting company.
+
+%Section: Work Experience at the top
+\section{Professional Experience}
+\begin{tabular}{R{2.5cm}|L{10.5cm}}
+\textsc{Feb} 2015 to  \textsc{Current} 2013 & \large{Senior Risk Quant at Nordea} \emph{Copenhagen, Denmark}
+ \\Mandate & FRTB market risk IMA, initial margin forward simulation, collateral model \\
+ Achievements &  Deliver a few key regulatory capital model changes from methodology to real implementation. Drive the process from beginning to end. Coordinate various internal/external stakeholders in the process.  \\
+% Experience in Excel & I developped following Excel applications:
+% \begin{itemize}
+%\item Daily pricing calculator for money market trader , the tool was used to calculate the external and internal funding rate for loan and deposit.
+%\item Regulator report auto generation tool for ALM department ,reduce the preparing time from two working days to 30 minutes.
+%\end{itemize} \\
+% \multicolumn{2}{c}{} \\
+\\
+
+\textsc{Mar} 2012 to  \textsc{Aug} 2013 & \large{ALM Manager at Bank of Montreal (BMO Asia) } \emph{Beijing, China}
+ \\Mandate & Funds Transfer Pricing, liquidity risk and structural interest rate risk \\
+ Achievements &  Launched and implemented several strategic important projects including FTP, new treasury function and new stress testing model\\
+% Experience in Excel & I developped following Excel applications:
+% \begin{itemize}
+%\item Daily pricing calculator for money market trader , the tool was used to calculate the external and internal funding rate for loan and deposit.
+%\item Regulator report auto generation tool for ALM department ,reduce the preparing time from two working days to 30 minutes.
+%\end{itemize} \\
+% \multicolumn{2}{c}{} \\
+\\
+
+ \textsc{Sep} 2007 to  \textsc{Mar} 2012 & \large{Manager at \textsc{KPMG} Advisory Financial Risk Management Department (FRM)},  \emph{Beijing, China}
+ \\ Focus area  & Market risk, complex derivative pricing, ALM   \\ 
+Achievements & Got EP(Excellent performance) rating (top 3\%) in three of four year's performance review. \\
+ 
+ %Experience in Excel & We helped our client develop report auto generation tool for various applications, including: 
+ 
+ %\begin{itemize}
+ %\item A data cleaning tool for one major sovereign investment fund of China , this tool could handle more than ten thousands position and NAV data(security level) from different investment companies. 
+ %\item A daily report generating tool for market risk department of one major commercial bank, produce more than 100 daily reports for regulator and internal purpose.
+ %\end{itemize} \\
+ %Cover areas &  Market risk, Financial derivative pricing. \\ 
+% Project Highlight&  We helped one large bank to implement Market Risk methodology and system including historical VaR, stress testing, back testing and option pricing. First approved market risk IMA (Internal Model Approach) Bank in China. \\
+% \\
+%Performance & 2008, Sp+; 2009, Sp+; 2010,EP; 2011,Ep; 
+ \multicolumn{2}{c}{} \\
+\end{tabular}
+%Section: Education
+%\section{Research Project}
+%\begin{tabular}{r|p{9cm}}
+%\textsc{Current}  & Application of Partial Differential Equation Numerical Solver to Finance
+% \\&\emph{Technical University Of Denmark}
+% \\ Aim & This project is under supervision of Allan P. Engsig-Karup (DTU Compute), and aimed to explore the possibility of applying numerical partial differential equation solver on Finance area.  \\
+% Interim result &  It is found that Sparse Grid Method could be a useful and efficient approach when solving partial differential equation under Libor Market Model Framework. \\
+%     \multicolumn{2}{c}{} \\
+%\end{tabular}
+
+\section{Education}
+\begin{tabular}{R{2.5cm}|L{10.5cm}}	
+ \textsc{Current} & \large{Master of Science in \textsc{Mathematical Modelling and Computation} } \\
+ & \textbf{Technical University of Denmark}, Copenhagen, Denmark\\ &
+ Expected graduated time : June 2015 \\
+&\normalsize \textsc{Average Grade}: 10.5/12\hyperlink{grds}{\hfill | \footnotesize Detailed List of Passed Course}\\&\\
+\textsc{Sep} 2007  & Undergraduate Degree in \textsc{Management Information System}  \\
+&\normalsize\textbf{Central University of Finance and Economics}, Beijing, China\\
+\end{tabular}
+
+
+
+
+\section{Skills}
+\begin{tabular}{R{2.5cm}|L{10.5cm}}	
+Risk  & Traded \& non-traded market risk, Counterparty Credit Risk,  FTP, VaR \& Expected shortfall methodology , liquidity risk \\
+% Regulation & Basel II \& III , FRTB \\
+Pricing model& Short rate model, Libor market model, CVA \& DVA \& FVA \\
+Numerical Method & Numerical solver for PDE (finite difference, finite element, Discontinuous Galerkin) , Monte Carlo Simulation, Reduced order method \\
+Risk model& Initial Margin Simulation Model, Collateral Model, Nomura Method\\
+Programming & Python, R, Matlab, VBA, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}, C++, MongoDB, GIT \\
+%Finance System & Bloomberg, SUMMIT, Numerix \\
+Language & English, Mandarin , Danish (Basic)
+\end{tabular}
+
+\bigskip
+
+\section{Certification}
+\begin{tabular}{R{2.5cm}|L{10.5cm}}
+2008 & Certified Information Systems Auditor (CISA) \\
+2010 & Financial Risk Manager (FRM)
+\end{tabular}
+
+
+
+\section{Projects}
+\begin{longtable}{R{2cm}|L{11cm}}
+\multirow{2}{2cm}{\textsc{Nov} 2016 to  \textsc{Current} } & \large{FRTB Market Risk IMA Implementation } \\
+ & To meet the tight FRTB deadline, working with another three colleagues as a small quant group to deliver internal model solution for FRTB. Currently responsible for credit products, work closely with more than 10 stakeholders and build a new market risk system platform for the bank under service oriented architecture  \\
+\\
+
+\multirow{2}{2cm}{\textsc{Feb} 2016 to  \textsc{Nov} 2016 } & \large{Forward initial margin simulation model in Nordea} \\
+ & Develop a forward initial margin simulation model used in counterparty credit exposure for both regulatory capital and MVA purpose. Act as the leading quant from beginning to end, including benchmarking with peers, choosing the working direction, prototyping, testing, seeking internal/external approval. A working paper will published soon about the model. \\
+\\
+
+\multirow{2}{2cm}{\textsc{Apr} 2015 to  \textsc{Feb} 2016 } & \large{Large-scale quant system upgrade project in Nordea} \\
+ & The project is to upgrade the quant finance library used for CCR IMM model in Nordea, involve both system and model changes. My role is firstly a tester and later become the driver in risk quant side, make sure all number changes are well communicated through the whole organization. \\
+\\
+
+\multirow{2}{2cm}{\textsc{Jun} 2014 to  \textsc{Dec} 2014 } & \large{Numerical solver of PDEs in pricing derivative} \\
+ & This project was under supervision of Allan P. Engsig-Karup (DTU Compute), and explored the possibility of applying advanced numerical partial differential equation solver in Finance area. Two topics have been studied in this project, 1) applying sparse grid method under Libor Market Model framework to resolve the high dimensional issue and 2) applying DG-FEM method to resolve the un-smooth payoff issue in a typical finance problem.  \\
+\\
+
+\multirow{2}{2cm}{\textsc{Jan} 2013 to  \textsc{Aug} 2013} & \large{Trading portfolio bifurcation project for BMO Asia} \\
+ & To support the bifurcation of portfolios in the bank, develop and maintain tools for p\&l and exposure reporting using EXCEL VBA. \\
+ \\
+%\\
+%\\
+\multirow{2}{2cm}{\textsc{Jun} 2012 to  \textsc{Feb} 2013 }& \large{Treasury set up project for BMO Singapore} \\
+ &This project is to set up a treasury function in Singapore to support the business expansion of BMO Asia. I was a key member in middle office team and responsible for implementing liquidity risk and market risk management framework to comply with the local regulatory(MAS) and internal requirement.  \\ 
+ \\
+
+\multirow{2}{2cm}{\textsc{Feb} 2012 to  \textsc{Aug} 2013 } & \large{Funds Transfer Pricing implementation in BMO Asia} \\
+ &Implement the funds transfer pricing model applied to BMO Asia area. As a key member in the project, I implemented the funds transfer price methodology, policy and process, discuss with funding desk and different Line of Business, and deliver training to all sales department in the bank. \\
+\\
+\multirow{2}{2cm}{\textsc{Jan} 2011 to  \textsc{Feb} 2012} & \large{Interest Rate Risk in Banking Book,Tier-1 Bank in China} \\
+ & Help one of the largest bank in China implement interest rate risk in banking book framework, I was the team leader of the quantitative modelling team which help the bank develop replicating portfolio model to capture the key interest rate risk arising from the balance sheet, and provide solution on hedging these risks under the practical market environment of China. \\
+\\
+%\hline \\
+\multirow{2}{2cm}{\textsc{Dec} 2009 to  \textsc{Feb} 2011 }& \large{Model Validation for complex derivative , Tier-1 Bank in China} \\
+ & Help the market risk department of the bank validate pricing model implemented by Numerix, I was the team leader for the interest rate modelling team. We validated pricing model include Hull White Model and Libor Market Model. Product include Range Accrual Swap (1 factor and 2 factor) and Target Redemption. \\
+ \\
+ %\hline \\
+\multirow{2}{2cm}{\textsc{Jun} 2008 -\textsc{Feb} 2011 } & \large{Market risk IMA approach, Tier-1 Bank in China} \\
+ & We helped one large size bank implement Market Risk methodology and system including historical VaR, stress testing, back testing and valuation. First approved market risk IMA (Internal Model Approach) Bank in China.
+Responsible for the designing and developing the pricing engine and risk metric engine, communicate and coordinate with IT, risk and vendor.
+\\
+%Help the client become the first IMA approved bank in China. \\
+\end{longtable}
+
+%\section{Research Activities}
+%\begin{tabular}{R{2.5cm}|L{10.5cm}}
+%   \multicolumn{2}{c}{} \\
+
+%\textsc{Aug} 2014  & Modelling Week of European Consortium for Mathematics in Industry
+% \\&\emph{Paderborn, Germany}
+% \\ Details & Represent Danish mathematical student to participate European modeling week, worked with 56 mathematical students from other 18 European countries and solve a practical problem using mathematical modelling knowledge.\\
+%     \multicolumn{2}{c}{} \\
+%\end{tabular}
+
+
+
+%Section: Languages
+
+%\section{Computer Skills}
+%\begin{tabular}{rl}
+%Advanced Knowledge:& VBA, Excel ,Matlab, R, Bloomberg\\
+%Intermediate Knowledge:&  Word, PowerPoint ,{\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}, C \\
+%Basic Knowledge:& \textsc{php}, \textsc{mysql}, \textsc{html}, \textsc{Access}, \textsc{Linux} \\
+%\end{tabular}
+
+%\newpage
+%\par{\centering\Large \hypertarget{grds}{Grades for Master of Science in Mathematical Modelling and Computation at TECHNICAL UNIVERSITY OF DENMARK}\par}\large{\centering Grades\par}\normalsize
+%\begin{center}
+%\begin{tabular}{lcc}
+%\multicolumn{1}{c}{\textsc{Exam}}&\textsc{Grade}&\textsc{ECTS Credits}\\ \hline
+%Stochastic Processes	&10&	5\\
+%Optimization and Data Fitting	&12&	5\\
+%The Finite Element Method for Partial Differential Equations	& Pass & 5\\
+%Integer Programming	& 10 &	5\\
+%Technology, Economics, Management and Organisation	&10&	10\\
+%Scientific Computing for Differential Equations	&10&	10\\
+%Finance Products	&10 &	5\\
+%Time Series Analysis	&10 &	5\\
+%Introduction to machine learning 	&10 &	5\\
+%Real Analysis 	&12 &	5\\	
+%Advanced Modelling - Applied Mathematics & 12 &5 \\
+%Functional analysis & 10 & 5\\
+%Diffusions and Stochastic Differential Equations & 12 & 5\\
+%Advanced Numerical Methods for Differential Equations & 12 & 5\\
+%Knowledge-based Entrepreneurship & 7 & 5\\
+%	\cline{1-3}	& Total& 90 \\\cline{2-3}
+%&\textsc{GPA}&\textbf{10.5}
+%\\
+%\footnotesize{ This results could be verified in this  \href{https://www.campusnet.dtu.dk/cnnet/Grades/Public.aspx?Id=6G6TWUWP5E}{link}  } 
+
+%\end{tabular}
+%\end{center}
+
+
+
+\end{document}
